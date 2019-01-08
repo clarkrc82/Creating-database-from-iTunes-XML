@@ -54,7 +54,8 @@ def lookup(i, key):
 
 doc = 'iTunes.xml'
 library = ET.parse(doc)
-songs = library.findall('dict/dict/dict') #Songs are in the 2nd child dict
+songs = library.findall('dict/dict/dict') #Finds all the songs in the 2nd child dict
+
 # Variable for song count
 song_count = 0
 
@@ -94,8 +95,12 @@ for entry in songs:
         (song, album_id, genre_id, length, count, rating ) 
         VALUES ( ?, ?, ?, ?, ?, ? )''', 
         (name, album_id, genre_id, length, count, rating))
+
     song_count += 1
+
+    # Ends transaction and make permanent all changes performed in the transaction
     conn.commit()
+
 # Prints out how many songs found compaired to songs entered into db
 print('Found {} songs in {}.'.format((len(songs)), doc))
 print('{} songs entered into the database.'.format(song_count))
