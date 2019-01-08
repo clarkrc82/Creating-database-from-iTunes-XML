@@ -12,9 +12,28 @@ To run this program, simply download idatabase.py and iTunes.xml (or use your ow
 
 ---
 
-## Database schema 
+## Database schema                  
 
-|   **Artist**   | |
-|---|---|
+**Artist Table** 
+
 |  id | name  |
-|  unique key | text  |
+|:---:|:---:|
+|  unique int | unique text  |
+
+**Genre Table** 
+
+|  id | name  |
+|:---:|:---:|
+|  unique int | unique text  |
+
+**Album Table** 
+
+|  id | artist_id  | album  |  year |
+|:---:|:---:|:---:|:---:|
+|  unique int | int  | unique text  | int  |
+
+**Track Table**
+
+|  id | song |  album_id | genre_id  | length  | count  | rating|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|  unique int | text  | int  | int  | int  | int  | int  |
