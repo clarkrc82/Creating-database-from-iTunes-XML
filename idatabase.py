@@ -54,13 +54,13 @@ def lookup(i, key):
 
 doc = 'iTunes.xml'
 library = ET.parse(doc)
-songs = library.findall('dict/dict/dict')
+songs = library.findall('dict/dict/dict') #Songs are in the 2nd child dict
 # Variable for song count
 song_count = 0
 
 # Loops through and enters into db all songs in doc
 for entry in songs:
-    # Uses the lookup function
+    # Uses the lookup function to return the text from key
     name = lookup(entry, 'Name')
     artist = lookup(entry, 'Artist')
     album = lookup(entry, 'Album')
@@ -69,7 +69,8 @@ for entry in songs:
     year = lookup(entry, 'Year')
     count = lookup(entry, 'Play Count')
     rating = lookup(entry, 'Rating')
-
+    
+    # Optional print msg
     #print(name, artist, album, genre, length, year, rating, count)
     
     # Inserts new Artist into db. If Artist in already in db, it ignores it and moves on.
@@ -95,6 +96,6 @@ for entry in songs:
         (name, album_id, genre_id, length, count, rating))
     song_count += 1
     conn.commit()
-
+# Prints out how many songs found compaired to songs entered into db
 print('Found {} songs in {}.'.format((len(songs)), doc))
 print('{} songs entered into the database.'.format(song_count))

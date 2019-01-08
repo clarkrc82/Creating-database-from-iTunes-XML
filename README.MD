@@ -9,3 +9,12 @@ This fun program takes an iTunes **XML** file, pulls out some of the info and co
 
 ---
 To run this program, simply download idatabase.py and iTunes.xml (or use your own iTunes library.xml file). Open the created iTunes.sqlite  file with SQLite
+
+---
+
+## Database schema 
+
+|   **Artist**   | |
+|---|---|
+|  id | name  |
+|  unique key | text  |
