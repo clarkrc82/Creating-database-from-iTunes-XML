@@ -1,6 +1,6 @@
 # About this project
 
-This fun program takes an iTunes **XML** file, pulls out some of the info and converts it into a database. It is my first project using **Python**. Even though it's a tiny program and database,  I think it’s a good way to show my basic knowledge of:
+This program takes an iTunes **XML** file, pulls out a bit of information and pushes it to a database using **SQL**. It is my first project using **Python**. Even though it's a tiny program and database,  I think it’s a good way to show my basic knowledge of:
 
 * Python
 * Parsing XML files
@@ -8,11 +8,11 @@ This fun program takes an iTunes **XML** file, pulls out some of the info and co
 * Databases
 
 ---
-To run this program, simply download idatabase.py, app.py (run first) and iTunes.xml (or use your own iTunes library.xml file). Open the created iTunes.sqlite  file with SQLite
+To run this program, simply download idatabase.py, app.py (run first) and iTunes.xml (or use your own iTunes library.xml file). Open the created iTunes.sqlite file with SQLite
 
 ---
 
-## Database schema                  
+## Database Schema                  
 
 **Artist Table** 
 
